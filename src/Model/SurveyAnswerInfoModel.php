@@ -5,7 +5,7 @@ namespace Gems\SurveyAnswerInfo\Model;
 
 use Gems\SurveyAnswerInfo\Model\Dependency\OrganizationTracksDependency;
 use Gems\SurveyAnswerInfo\Model\Dependency\SurveyCodeDependency;
-use Gems\SurveyAnswerInfo\Model\Transform\NullWhenNotSuppliedFilterTransformer;
+use Gems\SurveyAnswerInfo\Model\Transform\AddNullValuesToFilterTransformer;
 
 class SurveyAnswerInfoModel extends \Gems_Model_JoinModel
 {
@@ -43,7 +43,7 @@ class SurveyAnswerInfoModel extends \Gems_Model_JoinModel
 
     protected function addTransformers()
     {
-        $this->addTransformer(new NullWhenNotSuppliedFilterTransformer(
+        $this->addTransformer(new AddNullValuesToFilterTransformer(
             [
                 'gsai_id_organization',
                 'gsai_id_track',

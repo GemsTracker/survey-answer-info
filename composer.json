@@ -1,0 +1,31 @@
+{
+    "name": "gemstracker/survey-answer-info",
+    "description": "Gemstracker Survey answer info",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Jasper van Gestel",
+            "email": "jvangestel@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.0",
+        "gemstracker/gemstracker": ">= 1.9.0 || dev-r1.9.0 || dev-master"
+    },
+    "require-dev": {
+        "zf1s/phpunit": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gems\\SurveyAnswerInfo\\": "src"
+        }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/GemsTracker/gemstracker-library.git"
+        }
+    ]
+}
